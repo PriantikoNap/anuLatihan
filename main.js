@@ -58,7 +58,7 @@ function determineWinner(userChoice, computerChoice) {
     if (computerChoice === 'paper') {
       return 'You Won !';
     } else {
-      return 'Computer Wins ! ~~~~ Yahud';
+      return 'Computer Wins ! ~~~~ Yahud ke dua';
     }
   }
 }
