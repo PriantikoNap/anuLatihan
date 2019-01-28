@@ -1,64 +1,64 @@
-const getUserChoice = UserInput =>{
+const getUserChoice = UserInput => {
   UserInput = UserInput.toLowerCase()
-  if ( UserInput === 'rock'){
+  if (UserInput === 'rock') {
     return 'rock';
-  }else if(UserInput === 'paper'){
+  } else if (UserInput === 'paper') {
     return 'paper';
-  }else if(UserInput === 'scissors'){
+  } else if (UserInput === 'scissors') {
     return 'scossors';
-  }else{
+  } else {
     return false;
   }
 }
 
 console.log(getUserChoice('paper'))
 
-function getComputerChoice(){
-  return Math.floor(Math.random()*2)
+function getComputerChoice() {
+  return Math.floor(Math.random() * 2)
 }
 //console.log(getComputerChoice())
 let getComputerAnswer = getComputerChoice()
 //console.log(getComputerAnswer);
-function setComputerAnswer(getComputerAnswer){
-  if (getComputerAnswer === 0){
-  return 'rock';
-}else if(getComputerAnswer === 1){
-  return 'paper';
-}else if(getComputerAnswer === 2){
-  return 'scissors';
-}else{
-  return false;
- }
+function setComputerAnswer(getComputerAnswer) {
+  if (getComputerAnswer === 0) {
+    return 'rock';
+  } else if (getComputerAnswer === 1) {
+    return 'paper';
+  } else if (getComputerAnswer === 2) {
+    return 'scissors';
+  } else {
+    return false;
+  }
 }
 let determineAnswer = setComputerAnswer(getComputerAnswer);
 
 console.log(determineAnswer);
 
 
-function determineWinner(userChoice, computerChoice){
-  if (userChoice===computerChoice){
+function determineWinner(userChoice, computerChoice) {
+  if (userChoice === computerChoice) {
     return 'Game was a tie'
   }
-  
-  if (userChoice === 'rock'){
-    if(computerChoice==='paper'){
+
+  if (userChoice === 'rock') {
+    if (computerChoice === 'paper') {
       return 'Computer Win';
-    }else{
+    } else {
       return 'You Won !';
     }
   }
-    if (userChoice === 'paper'){
-    if(computerChoice==='rock'){
+  if (userChoice === 'paper') {
+    if (computerChoice === 'rock') {
       return 'You Won !';
-    }else{
+    } else {
       return 'Computer Wins';
     }
   }
-    if (userChoice === 'scissors'){
-    if(computerChoice==='paper'){
+  if (userChoice === 'scissors') {
+    if (computerChoice === 'paper') {
       return 'You Won !';
-    }else{
-      return 'Computer Wins';
+    } else {
+      return 'Computer Wins !';
     }
   }
 }
